@@ -10,8 +10,6 @@ class TrackerScreen extends StatefulWidget {
 class _TrackerScreenState extends State<TrackerScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(child: Text("This is the tracker screen"),)
-    );
+    return const Center(child: Text("This is the tracker screen"),);
   }
 }

@@ -36,6 +36,7 @@ dependencies:
   http: ^0.13.4
   url_launcher: ^6.1.5
   intl: ^0.17.0
+  cached_network_image: ^3.2.1
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +63,12 @@ flutter:
   assets:
     - assets/images/startscreen.gif
     - assets/images/doctor.webp
+    - assets/images/runny-nose.png
+    - assets/images/fever.png
+    - assets/images/fatigue.png
+    - assets/images/cough.png
+    - assets/images/shiver.png
+    - assets/images/sneeze.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -74,18 +81,18 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  fonts:
-    - family: Poppins
-      fonts:
-        - asset: assets/fonts/Poppins-Black.ttf
-        - weight: 100
-        - asset: assets/fonts/Poppins-ExtraLight.ttf
-        - weight: 200
-        - asset: assets/fonts/Poppins-Light.ttf
-        - weight: 300
-        - asset: assets/fonts/Poppins-Regular.ttf
-        - weight: 400
-        - asset: assets/fonts/Poppins-Thin.ttf
-        - weight: 100
+fonts:
+  - family: Poppins
+    fonts:
+      - asset: assets/fonts/Poppins-Black.ttf
+      - weight: 100
+      - asset: assets/fonts/Poppins-ExtraLight.ttf
+      - weight: 200
+      - asset: assets/fonts/Poppins-Light.ttf
+      - weight: 300
+      - asset: assets/fonts/Poppins-Regular.ttf
+      - weight: 400
+      - asset: assets/fonts/Poppins-Thin.ttf
+      - weight: 100
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

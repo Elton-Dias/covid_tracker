@@ -1,8 +1,5 @@
-import 'package:covid_tracker/models/country.dart';
 import 'package:covid_tracker/screens/start_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'components/country_data.dart';
 
 void main() {
   runApp(const MyApp());
