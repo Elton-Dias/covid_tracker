@@ -99,14 +99,15 @@ class _CountryState extends State<Country> {
                             country = _selected!.country.toString();
                           });
                         },
-                        items: snapshot.data
-                            ?.map<DropdownMenuItem<SingleCountry>>(
-                                (SingleCountry value) {
-                          return DropdownMenuItem<SingleCountry>(
-                            value: value,
-                            child: Text(value.country.toString()),
-                          );
-                        }).toList(),
+                        items:
+                            snapshot.data?.map<DropdownMenuItem<SingleCountry>>(
+                          (SingleCountry value) {
+                            return DropdownMenuItem<SingleCountry>(
+                              value: value,
+                              child: Text(value.country.toString()),
+                            );
+                          },
+                        ).toList(),
                       );
                     } else if (snapshot.hasError) {
                       return Text("${snapshot.error}");
@@ -160,15 +161,18 @@ class _CountryState extends State<Country> {
                                 ),
                                 Align(
                                   alignment: Alignment.bottomRight,
-                                  child: Text(
-                                    NumberFormat.compact()
-                                        .format(snapshot.data!.cases),
-                                    style: const TextStyle(
-                                      fontSize: 24,
-                                      color: Colors.red,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
+                                  child: snapshot.connectionState ==
+                                          ConnectionState.done
+                                      ? Text(
+                                          NumberFormat.compact()
+                                              .format(snapshot.data!.cases),
+                                          style: const TextStyle(
+                                            fontSize: 24,
+                                            color: Colors.red,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        )
+                                      : const CircularProgressIndicator(),
                                 ),
                               ],
                             ),
@@ -198,15 +202,18 @@ class _CountryState extends State<Country> {
                                 ),
                                 Align(
                                   alignment: Alignment.bottomRight,
-                                  child: Text(
-                                    NumberFormat.compact()
-                                        .format(snapshot.data!.active),
-                                    style: const TextStyle(
-                                      fontSize: 24,
-                                      color: Colors.blue,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
+                                  child: snapshot.connectionState ==
+                                          ConnectionState.done
+                                      ? Text(
+                                          NumberFormat.compact()
+                                              .format(snapshot.data!.active),
+                                          style: const TextStyle(
+                                            fontSize: 24,
+                                            color: Colors.blue,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        )
+                                      : const CircularProgressIndicator(),
                                 ),
                               ],
                             ),
@@ -245,15 +252,18 @@ class _CountryState extends State<Country> {
                                 ),
                                 Align(
                                   alignment: Alignment.bottomRight,
-                                  child: Text(
-                                    NumberFormat.compact()
-                                        .format(snapshot.data!.recovered),
-                                    style: const TextStyle(
-                                      fontSize: 24,
-                                      color: Colors.green,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
+                                  child: snapshot.connectionState ==
+                                          ConnectionState.done
+                                      ? Text(
+                                          NumberFormat.compact()
+                                              .format(snapshot.data!.recovered),
+                                          style: const TextStyle(
+                                            fontSize: 24,
+                                            color: Colors.green,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        )
+                                      : const CircularProgressIndicator(),
                                 ),
                               ],
                             ),
@@ -283,15 +293,18 @@ class _CountryState extends State<Country> {
                                 ),
                                 Align(
                                   alignment: Alignment.bottomRight,
-                                  child: Text(
-                                    NumberFormat.compact()
-                                        .format(snapshot.data!.deaths),
-                                    style: const TextStyle(
-                                      fontSize: 24,
-                                      color: Colors.grey,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
+                                  child: snapshot.connectionState ==
+                                          ConnectionState.done
+                                      ? Text(
+                                          NumberFormat.compact()
+                                              .format(snapshot.data!.deaths),
+                                          style: const TextStyle(
+                                            fontSize: 24,
+                                            color: Colors.grey,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        )
+                                      : const CircularProgressIndicator(),
                                 ),
                               ],
                             ),
@@ -302,7 +315,20 @@ class _CountryState extends State<Country> {
                   ],
                 );
               } else if (snapshot.hasError) {
-                return Text("${snapshot.error}");
+                return const Center(
+                  child: Padding(
+                    padding: EdgeInsets.all(11.0),
+                    child: Text(
+                      "Select a country from the drop down menu to continue",
+                      softWrap: true,
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                );
               }
               return const Center(child: CircularProgressIndicator());
             },
@@ -322,9 +348,10 @@ class _CountryState extends State<Country> {
 
 class SingleCountry {
   String? country;
+  static const defaultValue = "India";
 
   SingleCountry({
-    this.country,
+    this.country = defaultValue,
   });
 
   SingleCountry.fromJson(Map<String, dynamic> json) {

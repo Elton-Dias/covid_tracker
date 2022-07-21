@@ -47,13 +47,21 @@ class _SymptomsScreenState extends State<SymptomsScreen> {
                           const SizedBox(
                             height: 10,
                           ),
-                          const Text('Runny Nose'),
+                          const Text(
+                            'Runny Nose',
+                            style: TextStyle(
+                              color: Colors.blue,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 1.0,
+                            ),
+                          ),
                           const SizedBox(
                             height: 10,
                           ),
-                          const Text(
+                          Text(
                             'Mucus draining or driping from the nostril',
                             textAlign: TextAlign.center,
+                            style: TextStyle(color: Colors.grey.shade600),
                           )
                         ],
                       ),
@@ -77,13 +85,21 @@ class _SymptomsScreenState extends State<SymptomsScreen> {
                           const SizedBox(
                             height: 10,
                           ),
-                          const Text('Fever'),
+                          const Text(
+                            'Fever',
+                            style: TextStyle(
+                              color: Colors.blue,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 1.0,
+                            ),
+                          ),
                           const SizedBox(
                             height: 7,
                           ),
-                          const Text(
+                          Text(
                             'A temperature that is higher than normal. Typically around 98.6F(37C)',
                             textAlign: TextAlign.center,
+                            style: TextStyle(color: Colors.grey.shade600),
                           )
                         ],
                       ),
@@ -116,14 +132,21 @@ class _SymptomsScreenState extends State<SymptomsScreen> {
                           const SizedBox(
                             height: 10,
                           ),
-                          const Text('Dry Cough'),
+                          const Text(
+                            'Dry Cough',
+                            style: TextStyle(
+                              color: Colors.blue,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 1.0,
+                            ),
+                          ),
                           const SizedBox(
                             height: 7,
                           ),
-                          const Text(
-                            'A dry cough is a cough that doesnt bring up mucus',
-                            textAlign: TextAlign.center,
-                          )
+                          Text(
+                              'A dry cough is a cough that doesnt bring up mucus',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(color: Colors.grey.shade600))
                         ],
                       ),
                     ),
@@ -146,14 +169,21 @@ class _SymptomsScreenState extends State<SymptomsScreen> {
                           const SizedBox(
                             height: 10,
                           ),
-                          const Text('Fatigue'),
+                          const Text(
+                            'Fatigue',
+                            style: TextStyle(
+                              color: Colors.blue,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 1.0,
+                            ),
+                          ),
                           const SizedBox(
                             height: 5,
                           ),
-                          const Text(
-                            'You have no motivation, no energy, and overall feeling of tiredness',
-                            textAlign: TextAlign.center,
-                          )
+                          Text(
+                              'You have no motivation, no energy, and overall feeling of tiredness',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(color: Colors.grey.shade600))
                         ],
                       ),
                     ),
@@ -185,13 +215,21 @@ class _SymptomsScreenState extends State<SymptomsScreen> {
                           const SizedBox(
                             height: 10,
                           ),
-                          const Text('Shiver'),
+                          const Text(
+                            'Shiver',
+                            style: TextStyle(
+                              color: Colors.blue,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 1.0,
+                            ),
+                          ),
                           const SizedBox(
                             height: 7,
                           ),
-                          const Text(
+                          Text(
                             "It is body's natural response to getting colder",
                             textAlign: TextAlign.center,
+                            style: TextStyle(color: Colors.grey.shade600),
                           )
                         ],
                       ),
@@ -215,13 +253,21 @@ class _SymptomsScreenState extends State<SymptomsScreen> {
                           const SizedBox(
                             height: 7,
                           ),
-                          const Text('Fatigue'),
+                          const Text(
+                            'Fatigue',
+                            style: TextStyle(
+                              color: Colors.blue,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 1.0,
+                            ),
+                          ),
                           const SizedBox(
                             height: 5,
                           ),
-                          const Text(
+                          Text(
                             "Sneezing is your body's way of removing irritants from your nose",
                             textAlign: TextAlign.center,
+                            style: TextStyle(color: Colors.grey.shade600),
                           )
                         ],
                       ),
