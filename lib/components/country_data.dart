@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:covid_tracker/components/landing_grids.dart';
 import 'package:covid_tracker/components/url_box.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
@@ -331,20 +332,7 @@ class _CountryState extends State<Country> {
                   ],
                 );
               } else if (snapshot.hasError) {
-                return const Center(
-                  child: Padding(
-                    padding: EdgeInsets.all(11.0),
-                    child: Text(
-                      "Select a country from the drop down menu to continue",
-                      softWrap: true,
-                      style: TextStyle(
-                        color: Colors.blue,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                );
+                return const LandingScreen();
               }
               return const Center(child: CircularProgressIndicator());
             },
