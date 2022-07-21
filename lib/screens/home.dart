@@ -30,13 +30,20 @@ class _HomePageState extends State<HomePage> {
 
   Container bottomNavBar(BuildContext context) {
     return Container(
-      height: 60,
+      height: 50,
       decoration: BoxDecoration(
-          color: Theme.of(context).primaryColor,
-          borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(20), topRight: Radius.circular(20))),
+        color: Theme.of(context).primaryColor,
+        borderRadius: const BorderRadius.only(
+          topRight: Radius.circular(22),
+          topLeft: Radius.circular(22),
+        ),
+        boxShadow: const [
+          BoxShadow(color: Colors.blue, spreadRadius: 7.5, blurRadius: 0),
+        ],
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           IconButton(
             onPressed: () {

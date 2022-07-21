@@ -172,7 +172,11 @@ class _CountryState extends State<Country> {
                                             fontWeight: FontWeight.bold,
                                           ),
                                         )
-                                      : const CircularProgressIndicator(),
+                                      : const CircularProgressIndicator(
+                                          valueColor:
+                                              AlwaysStoppedAnimation<Color>(
+                                                  Colors.red),
+                                        ),
                                 ),
                               ],
                             ),
@@ -213,7 +217,11 @@ class _CountryState extends State<Country> {
                                             fontWeight: FontWeight.bold,
                                           ),
                                         )
-                                      : const CircularProgressIndicator(),
+                                      : const CircularProgressIndicator(
+                                          valueColor:
+                                              AlwaysStoppedAnimation<Color>(
+                                                  Colors.blue),
+                                        ),
                                 ),
                               ],
                             ),
@@ -263,7 +271,11 @@ class _CountryState extends State<Country> {
                                             fontWeight: FontWeight.bold,
                                           ),
                                         )
-                                      : const CircularProgressIndicator(),
+                                      : const CircularProgressIndicator(
+                                          valueColor:
+                                              AlwaysStoppedAnimation<Color>(
+                                                  Colors.green),
+                                        ),
                                 ),
                               ],
                             ),
@@ -304,7 +316,11 @@ class _CountryState extends State<Country> {
                                             fontWeight: FontWeight.bold,
                                           ),
                                         )
-                                      : const CircularProgressIndicator(),
+                                      : const CircularProgressIndicator(
+                                          valueColor:
+                                              AlwaysStoppedAnimation<Color>(
+                                                  Colors.grey),
+                                        ),
                                 ),
                               ],
                             ),
